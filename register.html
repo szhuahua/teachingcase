@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册页面</title>
+		<style type="text/css">
+			#pwdtable{
+				border-collapse: collapse;
+				display: inline-block;
+				vertical-align: bottom;
+			}
+			#pwdtable td{
+				border: solid 1px;
+				width:40px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<header id="header_img">
+				<img src="img/top_bg.jpg"/>
+			</header>
+			<caption>
+				<h1>注册</h1>
+			</caption>			
+		</header>
+		<div id="register">
+			<form  novalidate>
+				<fieldset>
+					<legend>基本信息</legend>
+					<table>
+						<tr>
+							<td>
+								<label>用户名</label>
+							</td>
+							<td>
+								<input type="text" id="username" placeholder="请输入手机号" size="20" maxlength="11" required pattern="1[3456789]\d{9}"/>
+								<label id='msgusername'></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>密码</label>
+							</td>
+							<td>
+								<input type="password" id="pwd" placeholder="请输入密码" required />
+								<label id='msgpwd'></label>
+								<table id="pwdtable">
+									<tr>
+										<td>弱</td>
+										<td>中</td>
+										<td>强</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>确认密码</label>
+							</td>
+							<td>
+								<input type="password" id="repwd" placeholder="请再次输入密码" required />
+								<label id='msgrepwd'></label>
+							</td>
+						</tr>					
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>详细信息</legend>
+					<table>
+						<tr>
+							<td>
+								<label>出生年月</label>
+							</td>
+							<td>
+								<input type="date" id="born" required /><label id='msgborn'></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>常用邮箱</label>
+							</td>
+							<td>
+								<input type="email" id="email" size="16" required /><label id='msgemail'></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>年龄</label>
+							</td>
+							<td>
+								<input type="number" id="age" value="20" required max=150 min=0 /><label id='msgage'></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>性别</label>
+							</td>
+							<td>
+								<input type="radio" name="sex" checked>男
+								<input type="radio" name="sex">女
+								<label id='msggender'></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>喜欢诗人</label>
+							</td>
+							<td>
+								<fieldset id="">
+									<legend> 喜欢的诗人</legend>
+									<input type="checkbox" name="like">李白
+									<input type="checkbox" name="like">杜甫
+									<input type="checkbox" name="like">白居易
+									<input type="checkbox" name="like">杜牧
+									<input type="checkbox" name="like">李商隐
+									<input type="checkbox" name="like">苏轼
+									<input type="checkbox" name="like">孟浩然
+									<input type="button" id="selAll" value="全选" />
+									<input type="button" id="selNo" value="全不选" />
+									<input type="button" id="seldis" value="反选" /></br>
+
+									<a href="brand.html"target="brand">查看诗人排行榜</a>
+									
+								</fieldset>
+									
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="submit" id="register" value="注册" />
+								<input type="reset" id="reset" value="重置" />
+							</td>
+						</tr>
+					</table>
+				</fieldset>
+			</form>
+		</div>
+		<div id="brand">
+			<p>
+				<iframe name="brand" width="400px" height="280px"frameborder="0" >
+					<p>您的浏览器不支持 iframe 标签。</p>
+				</iframe>		
+			</p>
+		</div>	
+		<script src="js/register.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
